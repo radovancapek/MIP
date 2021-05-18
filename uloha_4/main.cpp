@@ -63,11 +63,7 @@ void drawState(uint8_t * text) {
 
 void drawButtons() {
     BSP_LCD_DrawRect(B_ON_L, B_TOP, B_WIDTH, B_HEIGHT);
-    if (actualState == STATE_RADIO_OFF) {
-        BSP_LCD_DisplayStringAt(B_ON_S, B_S1, (uint8_t *)"TURN ON", LEFT_MODE);
-    } else {
-        BSP_LCD_DisplayStringAt(B_ON_S, B_S1, (uint8_t *)"TURN OFF", LEFT_MODE);
-    }
+    BSP_LCD_DisplayStringAt(B_ON_S, B_S1, (uint8_t *)"ON/OFF", LEFT_MODE);
     BSP_LCD_DrawRect(B_FM_L, B_TOP, B_WIDTH, B_HEIGHT); 
     BSP_LCD_DisplayStringAt(B_FM_S, B_S1, (uint8_t *)"AM/FM", LEFT_MODE);
     BSP_LCD_DrawRect(B_MP3_L, B_TOP, B_WIDTH, B_HEIGHT);
